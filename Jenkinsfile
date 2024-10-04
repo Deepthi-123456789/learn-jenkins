@@ -44,7 +44,7 @@ pipeline {
             }
         }
         stage('check params'){
-            steps {
+            steps  {
                 sh """
                     echo "Hello ${params.PERSON}"
 
@@ -61,9 +61,9 @@ pipeline {
     }
     // post build
     post { 
-        always { 
-            echo 'I will always say Hello again!'
-        }
+        // always { 
+        //     echo 'I will always say Hello again!'
+        // }
         failure { 
             echo 'this runs when pipeline is failed, used generally to send some alerts'
         }
